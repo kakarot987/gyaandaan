@@ -1,0 +1,314 @@
+[
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "1",
+    "subject" : "Maths",
+    "className" : "IX",
+    "syllabus" : {
+      "topicName" : "NUMBER SYSTEMS",
+      "topicName" : "ALGEBRA",
+      "topicName" : "COORDINATE GEOMETRY",
+      "topicName" : "GEOMETRY",
+      "topicName" : "MENSURATION",
+      "topicName" : "STATISTICS",
+      "topicName" : "PROBABILITY"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "2",
+    "subject" : "Physics",
+    "className" : "IX",
+    "syllabus" : {
+      "topicName" : "Force and Laws of Motion",
+      "topicName" : "Gravitation",
+      "topicName" : "Motion",
+      "topicName" : "Sound",
+      "topicName" : "Work and Energy"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "3",
+    "subject" : "Chemistry",
+    "className" : "IX",
+    "syllabus" : {
+      "topicName" : "Atoms and Molecules",
+      "topicName" : "Is Matter Around us Pure?",
+      "topicName" : "Matter In Our Surrounding",
+      "topicName" : "Structure of Atom"
+    }
+  },
+  {
+    "_class": "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id": "4",
+    "subject": "Biology",
+    "className": "IX",
+    "syllabus": {
+      "topicName": "The Fundamental Unit of Life",
+      "topicName": "Diversity in Living Organisms",
+      "topicName": "Improvements in Food Resources",
+      "topicName": "Natural Resources",
+      "topicName": "Tissues",
+      "topicName": "Why Do We Fall ill"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "5",
+    "subject" : "Maths",
+    "className" : "X",
+    "syllabus" : {
+      "topicName" : "Real Numbers",
+      "topicName" : "Polynomials",
+      "topicName" : "Pair of linear equation",
+      "topicName" : "Quadratic Equation",
+      "topicName" : "Arithmetic Progression",
+      "topicName" : "Triangles",
+      "topicName" : "Coordinate geometry",
+      "topicName" : "Introduction to trigonometry",
+      "topicName" : "Application of trigonometric ratio",
+      "topicName" : "Circles",
+      "topicName" : "Constructions",
+      "topicName" : "Areas related to circle",
+      "topicName" : "Surface areas and volumes",
+      "topicName" : "Statistics",
+      "topicName" : "Probability"
+
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "6",
+    "subject" : "Physics",
+    "className" : "X",
+    "syllabus" : {
+      "topicName" : "Light – Reflection and Refraction",
+      "topicName" : "The Human Eye and Colorful World",
+      "topicName" : "Electricity",
+      "topicName" : "Magnetic Effects of Electric Current",
+      "topicName" : "Source of Energy"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "7",
+    "subject" : "Biology",
+    "className" : "X",
+    "syllabus" : {
+      "topicName" : "How do organisms reproduce",
+      "topicName" : "Management of natural resources",
+      "topicName" : "Life processes",
+      "topicName" : "Control and coordination",
+      "topicName" : "Heredity and evolution",
+      "topicName" : "Our environment"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "8",
+    "subject" : "Chemistry",
+    "className" : "X",
+    "syllabus" : {
+      "topicName" : "Chemical reactions and equations",
+      "topicName" : "Acid, bases and salt",
+      "topicName" : "Metals and non-metals",
+      "topicName" : "Carbon and its compound",
+      "topicName" : "Periodic table"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "9",
+    "subject" : "Maths",
+    "className" : "XI",
+    "syllabus" : {
+      "topicName" : "Sets",
+      "topicName" : "Relations & Functions",
+      "topicName" : "Trigonometric Functions",
+      "topicName" : "Principle of Mathematical Induction",
+      "topicName" : "Complex Numbers and Quadratic Equations",
+      "topicName" : "Linear Inequalities",
+      "topicName" : "Permutations and Combinations",
+      "topicName" : "Binomial Theorem",
+      "topicName" : "Sequence and Series",
+      "topicName" : "Straight Lines",
+      "topicName" : "Conic Sections",
+      "topicName" : "Introduction to Three–dimensional Geometry",
+      "topicName" : "Limits and Derivatives",
+      "topicName" : "Mathematical Reasoning",
+      "topicName" : "Statistics",
+      "topicName" : "Probability"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "10",
+    "subject" : "Chemistry",
+    "className" : "XI",
+    "syllabus" : {
+      "topicName" : "Basic Concepts of Chemistry",
+      "topicName" : "Structure of Atom",
+      "topicName" : "Classification of Elements & Periodicity in Properties",
+      "topicName" : "Chemical Bonding and Molecular Structure",
+      "topicName" : "States of Matter: Gases and Liquids",
+      "topicName" : "Thermodynamics",
+      "topicName" : "Equilibrium",
+      "topicName" : "Redox Reactions",
+      "topicName" : "Hydrogen",
+      "topicName" : "s-Block Elements",
+      "topicName" : "p-Block Elements",
+      "topicName" : "Organic Chemistry",
+      "topicName" : "Hydrocarbons",
+      "topicName" : "Environmental Chemistry"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "11",
+    "subject" : "Biology",
+    "className" : "XI",
+    "syllabus" : {
+      "topicName" : "The Living World",
+      "topicName" : "Biological Classification",
+      "topicName" : "Plant Kingdom",
+      "topicName" : "Animal Kingdom",
+      "topicName" : "Morphology of Flowering Plants",
+      "topicName" : "Anatomy of Flowering Plants",
+      "topicName" : "Structural Organisation in Animals",
+      "topicName" : "Cell-The Unit of Life",
+      "topicName" : "Biomolecules",
+      "topicName" : "Cell Cycle and Cell Division",
+      "topicName" : "Transport in Plants",
+      "topicName" : "Mineral Nutrition",
+      "topicName" : "Photosynthesis in Higher Plants",
+      "topicName" : "Respiration in Plants",
+      "topicName" : "Plant - Growth and Development",
+      "topicName" : "Digestion and Absorption",
+      "topicName" : "Breathing and Exchange of Gases",
+      "topicName" : "Body Fluids and Circulation",
+      "topicName" : "Excretory Products and Their Elimination",
+      "topicName" : "Locomotion and Movement",
+      "topicName" : "Neural Control and Coordination",
+      "topicName" : "Chemical Coordination and Integration"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "12",
+    "subject" : "Physics",
+    "className" : "XI",
+    "syllabus" : {
+      "topicName" : "Physical World",
+      "topicName" : "Units and Measurements",
+      "topicName" : "Motion in a Straight Line",
+      "topicName" : "Motion in a Plane",
+      "topicName" : "Laws of Motion",
+      "topicName" : "Work, Energy and Power",
+      "topicName" : "System of Particles and Rotational Motion",
+      "topicName" : "Gravitation",
+      "topicName" : "Mechanical Properties of Solids",
+      "topicName" : "Mechanical Properties of Fluids",
+      "topicName" : "Thermal Properties of Matter",
+      "topicName" : "Thermodynamics",
+      "topicName" : "Kinetic Theory Gases",
+      "topicName" : "Oscillations",
+      "topicName" : "Waves",
+      "topicName" : "",
+      "topicName" : ""
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "13",
+    "subject" : "Maths",
+    "className" : "XII",
+    "syllabus" : {
+      "topicName" : "Relations and Functions",
+      "topicName" : "Inverse Trigonometric Functions",
+      "topicName" : "Matrices",
+      "topicName" : "Determinants",
+      "topicName" : "Continuity and Differentiability",
+      "topicName" : "Applications of Derivatives",
+      "topicName" : "Integrals",
+      "topicName" : "Applications of the Integrals",
+      "topicName" : "Differential Equations",
+      "topicName" : "Vectors",
+      "topicName" : "Three - dimensional Geometry",
+      "topicName" : "Linear Programming",
+      "topicName" : "Probability"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "14",
+    "subject" : "Biology",
+    "className" : "XII",
+    "syllabus" : {
+      "topicName" : "Reproduction in Organisms",
+      "topicName" : "Sexual Reproduction in Flowering Plants",
+      "topicName" : "Human Reproduction",
+      "topicName" : "Reproductive Health",
+      "topicName" : "Principles of Inheritance and Variation",
+      "topicName" : "Molecular Basis of Inheritance",
+      "topicName" : "Evolution",
+      "topicName" : "Human Health and Diseases",
+      "topicName" : "Strategies for Enhancement in Food Production",
+      "topicName" : "Microbes in Human Welfare",
+      "topicName" : "Biotechnology - Principles and Processes",
+      "topicName" : "Biotechnology and its Application",
+      "topicName" : "Organisms and Populations",
+      "topicName" : "Ecosystem",
+      "topicName" : "Biodiversity and its Conservation",
+      "topicName" : "Environmental Issues"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "15",
+    "subject" : "Chemistry",
+    "className" : "XII",
+    "syllabus" : {
+      "topicName" : "Solid State",
+      "topicName" : "Solutions",
+      "topicName" : "Electrochemistry",
+      "topicName" : "Chemical Kinetics",
+      "topicName" : "Surface Chemistry",
+      "topicName" : "Isolation of Elements",
+      "topicName" : "p-Block Elements",
+      "topicName" : "d-and f-Block Elements",
+      "topicName" : "Coordination Compounds",
+      "topicName" : "Haloalkanes and Haloarenes",
+      "topicName" : "Alcohols, Phenols & Ethers",
+      "topicName" : "Aldhydes, Ketones & Carboxylic Acids",
+      "topicName" : "Organic Compounds containing Nitrogen",
+      "topicName" : "Biomolecules",
+      "topicName" : "Polymers",
+      "topicName" : "Chemistry in Everyday Life"
+    }
+  },
+  {
+    "_class" : "com.courseassign.courses.Entity.SubjectSyllabus",
+    "id" : "16",
+    "subject" : "Physics",
+    "className" : "XII",
+    "syllabus" : {
+      "topicName" : "Electric Charges and Fields",
+      "topicName" : "Electrostatic Potential and Capacitance",
+      "topicName" : "Current Electricity",
+      "topicName" : "Moving Charges and Magnetism",
+      "topicName" : "Magnetism and Matter",
+      "topicName" : "Electromagnetic Induction",
+      "topicName" : "Alternating Current",
+      "topicName" : "Electromagnetic Waves",
+      "topicName" : "Ray Optics and Optical Instruments",
+      "topicName" : "Wave Optics",
+      "topicName" : "Dual Nature of Radiation and Matter",
+      "topicName" : "Atoms",
+      "topicName" : "Nuclei",
+      "topicName" : "Semiconductor Electronics",
+      "topicName" : "Communication Systems"
+
+    }
+  }
+]

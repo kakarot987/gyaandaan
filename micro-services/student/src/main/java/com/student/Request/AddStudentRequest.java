@@ -1,36 +1,19 @@
-package com.student.Entity;
+package com.student.Request;
 
-import com.sun.istack.NotNull;
+import com.student.Entity.Subjects;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-@ApiModel(description = "Class representing a Student in the application")
-@Entity
-@Table(name="StudentInfo")
-public class Student implements Serializable {
-
-    private static final long serialVersionUID = 4048798961366546485L;
-
-    @ApiModelProperty(
-            notes = "Unique identifier of the Student.",
-            example = "1",
-            required = true,
-            position = 0
-    )
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "studentId")
-    private Long id;
+@ApiModel(description = "Class representing Student data requested from User.")
+public class AddStudentRequest {
 
     @ApiModelProperty(
             notes = "Name of the Student.",
@@ -39,7 +22,6 @@ public class Student implements Serializable {
             position = 1
     )
     @NotBlank
-    @Column(name = "studentName")
     private String studentName;
 
     @ApiModelProperty(
@@ -48,7 +30,6 @@ public class Student implements Serializable {
             required = true,
             position = 2
     )
-    @Column(name = "studentUsername")
     private String studentUsername;
 
     @ApiModelProperty(
@@ -68,7 +49,6 @@ public class Student implements Serializable {
             position = 4
     )
     @NotBlank
-    @Column(name = "studentDob")
     private Date studentDob;
 
     @ApiModelProperty(
@@ -88,7 +68,6 @@ public class Student implements Serializable {
             position = 6
     )
     @Size(max = 100)
-    @Column(name = "studentSchool")
     private String studentSchool;
 
     @ApiModelProperty(
@@ -98,7 +77,6 @@ public class Student implements Serializable {
             position = 7
     )
     @Size(max = 5)
-    @Column(name = "studentClass")
     private String studentClass;
 
     @ApiModelProperty(
@@ -107,7 +85,6 @@ public class Student implements Serializable {
             required = false,
             position = 8
     )
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
     private List<Subjects> studentSubjects = new ArrayList<>();
 
     @ApiModelProperty(
@@ -117,7 +94,6 @@ public class Student implements Serializable {
             position = 9
     )
     @Size(max = 100)
-    @Column(name = "studentCareerGoal")
     private String studentCareerGoal;
 
     @ApiModelProperty(
@@ -126,76 +102,7 @@ public class Student implements Serializable {
             required = false,
             position = 10
     )
-    @Column(length = 4000)
     private String studentBio;
-
-    @ApiModelProperty(
-            notes = "Total number of courses a Student Register.",
-            example = "5",
-            required = true,
-            position = 11
-    )
-    @Column(name = "studentTotalEnrollCourse")
-    private int studentTotalEnroll;
-
-
-    @ApiModelProperty(
-            notes = "Registration Date of the Student.",
-            example = "22/12/2021",
-            required = true,
-            position = 12
-    )
-    @Column(name = "studentRegistrationDate")
-    private Date studentRegistrationDate;
-
-    @ApiModelProperty(
-            notes = "Last time Student logged in.",
-            example = "22/12/2021",
-            required = true,
-            position = 13
-    )
-    @Column(name = "studentLastSeen")
-    private Date studentLastSeen;
-
-    @ApiModelProperty(
-            notes = "Percentage of Profile Completion.",
-            example = "90",
-            required = true,
-            position = 14
-    )
-    @Column(name = "studentProfileComplete")
-    private String studentProfileComplete;
-
-    public Student() {
-    }
-
-    public Student(String studentName, String studentUsername,
-                   String studentMail, Date studentDob,
-                   String studentPhone, String studentSchool,
-                   String studentClass, String studentCareerGoal,
-                   String studentBio, int studentTotalEnroll,
-                   Date studentRegistrationDate, String studentProfileComplete) {
-        this.studentName = studentName;
-        this.studentUsername = studentUsername;
-        this.studentMail = studentMail;
-        this.studentDob = studentDob;
-        this.studentPhone = studentPhone;
-        this.studentSchool = studentSchool;
-        this.studentClass = studentClass;
-        this.studentCareerGoal = studentCareerGoal;
-        this.studentBio = studentBio;
-        this.studentTotalEnroll = studentTotalEnroll;
-        this.studentRegistrationDate = studentRegistrationDate;
-        this.studentProfileComplete = studentProfileComplete;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getStudentName() {
         return studentName;
@@ -275,37 +182,5 @@ public class Student implements Serializable {
 
     public void setStudentBio(String studentBio) {
         this.studentBio = studentBio;
-    }
-
-    public int getStudentTotalEnroll() {
-        return studentTotalEnroll;
-    }
-
-    public void setStudentTotalEnroll(int studentTotalEnroll) {
-        this.studentTotalEnroll = studentTotalEnroll;
-    }
-
-    public Date getStudentRegistrationDate() {
-        return studentRegistrationDate;
-    }
-
-    public void setStudentRegistrationDate(Date studentRegistrationDate) {
-        this.studentRegistrationDate = studentRegistrationDate;
-    }
-
-    public Date getStudentLastSeen() {
-        return studentLastSeen;
-    }
-
-    public void setStudentLastSeen(Date studentLastSeen) {
-        this.studentLastSeen = studentLastSeen;
-    }
-
-    public String getStudentProfileComplete() {
-        return studentProfileComplete;
-    }
-
-    public void setStudentProfileComplete(String studentProfileComplete) {
-        this.studentProfileComplete = studentProfileComplete;
     }
 }

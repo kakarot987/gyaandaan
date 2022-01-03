@@ -1,4 +1,4 @@
-package com.teacher.Request;
+package com.teacher.Response;
 
 import com.teacher.Entity.AreaOfExpertise;
 import com.teacher.Entity.Qualification;
@@ -7,12 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @ApiModel(description = "Class representing Volunteer data requested from User.")
-public class AddVolunteerRequest {
+public class GetVolunteerResponse {
+
 
     @ApiModelProperty(
             value = "The primary identifier of the volunteer.",
@@ -108,18 +109,26 @@ public class AddVolunteerRequest {
     )
     private List<Qualification> qualificationList = new ArrayList<>();
 
+    public GetVolunteerResponse() {
+    }
 
-    public AddVolunteerRequest(String name, Date volunteerDob, String volunteerMail,
-                               List<AreaOfExpertise> areaOfExpertiseList,
-                               String volunteerAvailability) {
+    public GetVolunteerResponse(String name, Date volunteerDob,
+                                String volunteerMail, List<AreaOfExpertise> areaOfExpertiseList,
+                                String volunteerAvailability, String volunteerUsername,
+                                String mobileNumber, String volunteerBio,
+                                String volunteerHighestDegree, String teacherExperience,
+                                List<Qualification> qualificationList) {
         this.name = name;
         this.volunteerDob = volunteerDob;
         this.volunteerMail = volunteerMail;
         this.areaOfExpertiseList = areaOfExpertiseList;
         this.volunteerAvailability = volunteerAvailability;
-    }
-
-    public AddVolunteerRequest() {
+        this.volunteerUsername = volunteerUsername;
+        this.mobileNumber = mobileNumber;
+        this.volunteerBio = volunteerBio;
+        this.volunteerHighestDegree = volunteerHighestDegree;
+        this.teacherExperience = teacherExperience;
+        this.qualificationList = qualificationList;
     }
 
     public String getName() {
@@ -148,6 +157,18 @@ public class AddVolunteerRequest {
 
     public List<AreaOfExpertise> getAreaOfExpertiseList() {
         return areaOfExpertiseList;
+    }
+
+    public void setAreaOfExpertiseList(List<AreaOfExpertise> areaOfExpertiseList) {
+        this.areaOfExpertiseList = areaOfExpertiseList;
+    }
+
+    public String getVolunteerAvailability() {
+        return volunteerAvailability;
+    }
+
+    public void setVolunteerAvailability(String volunteerAvailability) {
+        this.volunteerAvailability = volunteerAvailability;
     }
 
     public String getVolunteerUsername() {
@@ -196,17 +217,5 @@ public class AddVolunteerRequest {
 
     public void setQualificationList(List<Qualification> qualificationList) {
         this.qualificationList = qualificationList;
-    }
-
-    public void setAreaOfExpertiseList(List<AreaOfExpertise> areaOfExpertiseList) {
-        this.areaOfExpertiseList = areaOfExpertiseList;
-    }
-
-    public String getVolunteerAvailability() {
-        return volunteerAvailability;
-    }
-
-    public void setVolunteerAvailability(String volunteerAvailability) {
-        this.volunteerAvailability = volunteerAvailability;
     }
 }

@@ -5,6 +5,8 @@ import com.teacher.Entity.Qualification;
 import com.teacher.Entity.Volunteer;
 import com.teacher.Request.AddVolunteerRequest;
 import com.teacher.Response.AddVolunteerResponse;
+import com.teacher.Response.GetVolunteerResponse;
+import com.teacher.Response.MessageResponse;
 import com.teacher.repository.VolunteerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -69,8 +71,16 @@ public class VolunteerService {
         return Optional.of(addVolunteerResponse);
     }
 
-   //Service for updating Volunteer Profile
+    //Service for Get Volunteer Information
+    public GetVolunteerResponse getVolunteerResponse(String emailId){
+        Optional<Volunteer> volunteer = volunteerRepository.findByVolunteerMail(emailId);
+        Long uuid = new Long(1);
+        Date updatedDate  = updateLoggedInDate(uuid);
+        volunteerRepository.updateVolunteerLastLogTime(updatedDate,uuid);
+        return new GetVolunteerResponse();
+    }
 
+   //Service for updating Volunteer Profile
     private String updateProfile(AddVolunteerRequest addVolunteerRequest, Long id){
         Volunteer profileVolunteer = new Volunteer();
 
@@ -87,6 +97,14 @@ public class VolunteerService {
                 addVolunteerRequest.getVolunteerHighestDegree(),
                 id);
         return "changed";
+    }
+
+    //Service for Deleting userAccount
+    public MessageResponse deleteVolunteer(Long uuid){
+        volunteerRepository.deleteById(uuid);
+        return new MessageResponse(
+                "Volunteer Deleted Succesfully"
+        );
     }
 
     private Date updateLoggedInDate(Long uuid){

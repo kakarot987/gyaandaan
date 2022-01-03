@@ -1,0 +1,50 @@
+[
+  {
+    "_class" : "com.courseassign.courses.Entity.StudentCourse",
+    "id" : "1",
+    "className" : "IX",
+    "subjects" : {
+      "subjectName" : "Maths",
+      "subjectName" : "Physics",
+      "subjectName" : "Chemistry",
+      "subjectName" : "Biology",
+      "subjectName" : "Computer Science"
+    }
+  },
+  {
+    "_class": "com.courseassign.courses.Entity.StudentCourse",
+    "id": "2",
+    "className": "X",
+    "subjects": {
+      "subjectName": "Maths",
+      "subjectName": "Physics",
+      "subjectName": "Chemistry",
+      "subjectName": "Biology",
+      "subjectName": "Computer Science"
+    }
+  },
+  {
+    "_class": "com.courseassign.courses.Entity.StudentCourse",
+    "id": "3",
+    "className": "XI",
+    "subjects": {
+      "subjectName": "Maths",
+      "subjectName": "Physics",
+      "subjectName": "Chemistry",
+      "subjectName": "Biology",
+      "subjectName": "Computer Science"
+    }
+  },
+  {
+    "_class": "com.courseassign.courses.Entity.StudentCourse",
+    "id": "4",
+    "className": "XII",
+    "subjects": {
+      "subjectName": "Maths",
+      "subjectName": "Physics",
+      "subjectName": "Chemistry",
+      "subjectName": "Biology",
+      "subjectName": "Computer Science"
+    }
+  }
+]

@@ -1,13 +1,13 @@
-package com.teacher.controller;
+package com.student.Controller;
 
-import com.teacher.Request.AddVolunteerRequest;
-import com.teacher.Response.AddVolunteerResponse;
-import com.teacher.Response.MessageResponse;
-import com.teacher.Service.VolunteerService;
-import com.teacher.repository.VolunteerRepository;
+import com.netflix.discovery.converters.Auto;
 
+import com.student.Repository.StudentRepository;
+import com.student.Request.AddStudentRequest;
+import com.student.Response.AddStudentResponse;
+import com.student.Response.MessageResponse;
+import com.student.Service.StudentService;
 import io.swagger.annotations.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,25 +20,26 @@ import java.util.Optional;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
-@Api(tags = "Volunteer Details")
+@Api(tags = "Student Details")
 @RestController
-@RequestMapping("/volunteer/api/")
-public class VolunteerController {
+@RequestMapping(path = "/student/api")
+public class StudentController {
+
 
     @Autowired
-    private VolunteerService volunteerService;
+    private StudentService studentService;
 
     @Autowired
-    private VolunteerRepository volunteerRepository;
+    private StudentRepository studentRepository;
 
     @ApiOperation(
-            value = "Add a valunteer to an application.",
+            value = "Add a Student to the application.",
             authorizations = {@Authorization(value = AUTHORIZATION)}
     )
     @ApiResponses({
             @ApiResponse(
                     code = 200,
-                    message = "Volunteer Added Succesfully."
+                    message = "Student Added Succesfully."
             ),
             @ApiResponse(
                     code = 400,
@@ -57,19 +58,19 @@ public class VolunteerController {
                     message =  "The service couldn't perform the request"
             )
     })
-    @PostMapping(value = "/addVolunteer", produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> addVolunteerResponse(
-            @RequestBody AddVolunteerRequest addVolunteerRequest){
-        if(volunteerRepository.findByVolunteerMail(addVolunteerRequest.getVolunteerMail()).isPresent()){
+    @PostMapping(value = "/addStudent", produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> addStudent(
+            @RequestBody AddStudentRequest addStudentRequest){
+        if(studentRepository.findByStudentMail(addStudentRequest.getStudentMail())){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error : Email is already in use."));
         }
-        Optional<AddVolunteerResponse> addVolunteerResponse = volunteerService.addVolunteer(addVolunteerRequest);
-        if(addVolunteerResponse.isPresent()){
+        Optional<AddStudentResponse> addStudentResponse = studentService.addStudent(addStudentRequest);
+        if(addStudentResponse.isPresent()){
             return ResponseEntity
-                    .of(addVolunteerResponse)
-                    .ok(new MessageResponse("Volunteer added succesfully"));
+                    .of(addStudentResponse)
+                    .ok(new MessageResponse("Student added succesfully"));
         }
         else {
             return ResponseEntity
@@ -77,6 +78,7 @@ public class VolunteerController {
                     .body(new MessageResponse("Unknown Error Occur"));
         }
     }
+
 
 
 }

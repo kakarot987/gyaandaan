@@ -8,11 +8,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.Optional;
 
 @Repository
 public interface VolunteerRepository extends JpaRepository<Volunteer,Long> {
 
-    public Boolean findByVolunteerMail(String email);
+    public Optional<Volunteer> findByVolunteerMail(String email);
 
     @Modifying
     @Query("update Volunteer v set " +
